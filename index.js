@@ -41,4 +41,76 @@ let libro = [
         },
         peso: "432 gr"
     },
+    {
+        titulo : "Harry Potter y el pricionero de azkaban",
+        autor : "J.K. Rowling",
+        genero : "fantasia",
+        idioma : "Castellano",
+        precio : "$ 75.999 Col.",
+        formato : "Tapa dura",
+        ISBN : "9788478885190",
+        descripcion :"«Bienvenido al autobús noctámbulo, transporte de emergencia para el  brujo abandonado a su suerte. Levante la varita, suba a bordo y lo llevaremos a donde quiera.» Cuando el autobús noctámbulo irrumpe en una calle oscura y frena con  fuertes chirridos delante de Harry, comienza para él un nuevo curso en  Hogwarts, lleno de acontecimientos extraordinarios. Sirius Black,  asesino y seguidor de lord Voldemort, se ha fugado, y dicen que va en  busca de Harry. En su primera clase de Adivinación, la profesora  Trelawney ve un augurio de muerte en las hojas de té de la taza de  Harry... Pero quizá lo más aterrador sean los dementores que patrullan  por los jardines del colegio, capaces de sorberte el alma con su beso...",
+        estado : "Nuevo",
+        ubicacion : "la casa del libro",
+        fechaPublicacion : "8 July 1999",
+        editorial : "Salamandra Infantil y Juvenil",
+        paginas: "352",
+        dimensiones : {
+            alto : "22 cm",
+            ancho : "14 cm",
+            grueso : "2.7 cm",
+        },
+        peso: "498 gr"
+    },
+    {
+        titulo : "Harry Potter y el caliz de fuego",
+        autor : "J.K. Rowling",
+        genero : "fantasia",
+        idioma : "Castellano",
+        precio : "$ 75.999 Col.",
+        formato : "Tapa dura",
+        ISBN : "9788478885190",
+        descripcion :"«Bienvenido al autobús noctámbulo, transporte de emergencia para el  brujo abandonado a su suerte. Levante la varita, suba a bordo y lo llevaremos a donde quiera.» Cuando el autobús noctámbulo irrumpe en una calle oscura y frena con  fuertes chirridos delante de Harry, comienza para él un nuevo curso en  Hogwarts, lleno de acontecimientos extraordinarios. Sirius Black,  asesino y seguidor de lord Voldemort, se ha fugado, y dicen que va en  busca de Harry. En su primera clase de Adivinación, la profesora  Trelawney ve un augurio de muerte en las hojas de té de la taza de  Harry... Pero quizá lo más aterrador sean los dementores que patrullan  por los jardines del colegio, capaces de sorberte el alma con su beso...",
+        estado : "Nuevo",
+        ubicacion : "la casa del libro",
+        fechaPublicacion : "8 July 1999",
+        editorial : "Salamandra Infantil y Juvenil",
+        paginas: "352",
+        dimensiones : {
+            alto : "22 cm",
+            ancho : "14 cm",
+            grueso : "2.7 cm",
+        },
+        peso: "498 gr"
+    },
 ]
+
+function agregarLibro() {
+let libro = {};
+
+libro.titulo = prompt("Ingresa el título del libro:");
+libro.autor = prompt("Ingresa el autor del libro:");
+libro.genero = prompt("Ingresa el género del libro:");
+libro.idioma = prompt("Ingresa el idioma del libro:");
+libro.precio = prompt("Ingresa el precio del libro:");
+libro.formato = prompt("Ingresa el formato del libro:");
+libro.isbn = prompt("Ingresa el ISBN del libro:");
+libro.descripcion = prompt("Ingresa la descripción del libro:");
+libro.estado = prompt("Ingresa el estado del libro:");
+libro.ubicacion = prompt("Ingresa la ubicación del libro:");
+libro.fecha_publicacion = prompt("Ingresa la fecha de publicación del libro:");
+libro.editorial = prompt("Ingresa la editorial del libro:");
+libro.paginas = prompt("Ingresa el número de páginas del libro:");
+libro.dimensiones = {
+    alto: prompt("Ingresa el alto del libro:"),
+    ancho: prompt("Ingresa el ancho del libro:"),
+    grueso: prompt("Ingresa el grueso del libro:")
+};
+libro.peso = prompt("Ingresa el peso del libro:");
+
+libros.push(libro);
+}
+
+agregarLibro(libro)
+
+console.log(libro);
