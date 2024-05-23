@@ -11,8 +11,8 @@ let libro = [
         estado : "Nuevo",
         ubicacion : "la casa del libro",
         fechaPublicacion : "26 June 1997",
-        editorial : "264",
-        paginas: "Salamandra Infantil y Juvenil",
+        editorial : "Salamandra Infantil y Juvenil",
+        paginas: "264",
         dimensiones : {
             ancho : "13.7 cm",
             alto : "22 cm",
@@ -32,8 +32,8 @@ let libro = [
         estado : "Nuevo",
         ubicacion : "la casa del libro",
         fechaPublicacion : "2 July 1998",
-        editorial : "296",
-        paginas: "Salamandra Infantil y Juvenil",
+        editorial : "Salamandra Infantil y Juvenil",
+        paginas: "296",
         dimensiones : {
             ancho : "13.7 cm",
             alto : "22 cm",
@@ -116,7 +116,7 @@ let libro = [
         estado : "Nuevo",
         ubicacion : "la casa del libro",
         fechaPublicacion : "8 July 2000",
-        editorial : "Salamandra Infantil y Juvenil",
+        editorial : "Mirahadas",
         paginas: "672",
         dimensiones : {
             alto : "22.1 cm",
@@ -137,7 +137,7 @@ let libro = [
         estado: "Nuevo",
         ubicacion: "Panamericana",
         fecha_publicacion: "08/06/2017",
-        editorial: "MONTENA",
+        editorial: "Mirahadas",
         paginas: "448",
         dimensiones: {
             alto: "21.5 cm",
@@ -159,7 +159,7 @@ let libro = [
         estado: "Nuevo",
         ubicacion: "Panamericana",
         fecha_publicacion: "21/09/2017",
-        editorial: "B de Bolsillo",
+        editorial: "Mirahadas",
         paginas: "448",
         dimensiones: {
             alto: "19.1 cm",
@@ -181,7 +181,7 @@ let libro = [
         estado: "Nuevo",
         ubicacion: "Panamericana",
         fecha_publicacion: "01/02/2018",
-        editorial: "Montena",
+        editorial: "Mirahadas",
         paginas: "448",
         dimensiones: {
             alto: "21.5 cm",
@@ -203,7 +203,7 @@ let libro = [
         estado: "Nuevo",
         ubicacion: "Panamericana",
         fecha_publicacion: "24/10/2019",
-        editorial: "Montena",
+        editorial: "Mirahadas",
         paginas: "448",
         dimensiones: {
             alto: "21.7 cm",
@@ -246,7 +246,7 @@ let libro = [
         descripcion: "Raquel lleva toda la vida loca por Ares, su atractivo y misterioso  vecino. Lo observa sin ser vista desde su ventana y es que, muy a su pesar, no han intercambiado ni una triste palabra. Lo que Raquel no sabe es que eso está a punto de cambiar...",
         ubicacion: "Panamericana",
         fecha_publicacion: "16/05/2019",
-        editorial: "Alfaguara",
+        editorial: "Montena",
         paginas: "416",
         dimensiones: {
             alto: "21.6 cm",
@@ -312,7 +312,7 @@ let libro = [
         estado: "Nuevo",
         ubicacion: "Panamericana",
         fecha_publicacion: "02/03/2022",
-        editorial: "Crossbooks",
+        editorial: "Montena",
         paginas: "368",
         dimensiones: {
             alto: "22.5 cm",
@@ -378,7 +378,7 @@ let libro = [
         estado: "Nuevo",
         ubicacion: "Panamericana",
         fecha_publicacion: "mayo de 2022",
-        editorial: "Crossbooks Chile",
+        editorial: "Crossbooks ",
         paginas: "338",
         dimensiones: {
             alto: "23 cm",
@@ -400,7 +400,7 @@ let libro = [
         estado: "Nuevo",
         ubicacion: "Panamericana",
         fecha_publicacion: "noviembre de 2022",
-        editorial: "Crossbooks Chile",
+        editorial: "Crossbooks ",
         paginas: "416",
         dimensiones: {
             alto: "23 cm",
@@ -421,7 +421,7 @@ let libro = [
         estado: "Nuevo",
         ubicacion: "Panamericana",
         fecha_publicacion: "1981",
-        editorial: " La Oveja Negra",
+        editorial: "Crossbooks",
         paginas: "144",
         dimensiones: {
             alto: "19 cm",
@@ -514,23 +514,36 @@ msj = "opciones de edición para los libros\n\n";
 msj += "1. Agregar libro\n";
 msj += "2. Eliminar un libro por su nombre\n";
 msj += "3. Eliminar el último libro agregado\n"
-msj += "4. Mostrar lista de libros\n\n"
-msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y 4"
-codigo = parseInt(prompt(mjs));
-switch (código) {
+msj += "4. Mostrar lista de libros\n"
+msj += "5. Resumen \n\n"
+msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y 5"
+let codigo = parseInt(prompt(msj));
+switch (codigo) {
     case 1:
         agregarLibro();
-    break;
+        break;
     case 2:
         eliminarLibroNombre();
-    break;
-
+        break;
     case 3:
         eliminarUltimoLibro();
-    break;
+        break;
     case 4:
         mostrarLibros();
-    break;
+        break;
+    case 5:
+        console.table(NUEVAARRAY);
+        break;    
     default:
         document.write(" el código que ingresó no es válido")
 }
+
+
+const NUEVAARRAY = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        autor: libros.autor,
+        editorial: libros.editorial,
+        precio: libros.precio,
+    }
+})
