@@ -483,5 +483,54 @@ function eliminarUltimoLibro() {
     }
 }
 
+function mostrarLibros() {
+    if(libro.length > 0) {
+        for(let i = 0; i < libro.length; i++) {
+            console.log(`Libro ${i+1}:`);
+            console.log(`Título: ${libro[i].titulo}`);
+            console.log(`Autor: ${libro[i].autor}`);
+            console.log(`Género: ${libro[i].genero}`);
+            console.log(`Idioma: ${libro[i].idioma}`);
+            console.log(`Precio: ${libro[i].precio}`);
+            console.log(`Formato: ${libro[i].formato}`);
+            console.log(`ISBN: ${libro[i].isbn}`);
+            console.log(`Descripción: ${libro[i].descripcion}`);
+            console.log(`Estado: ${libro[i].estado}`);
+            console.log(`Ubicación: ${libro[i].ubicacion}`);
+            console.log(`Fecha de publicación: ${libro[i].fecha_publicacion}`);
+            console.log(`Editorial: ${libro[i].editorial}`);
+            console.log(`Páginas: ${libro[i].paginas}`);
+            console.log(`Dimensiones: Alto - ${libro[i].dimensiones.alto}, Ancho - ${libro[i].dimensiones.ancho}, Grueso - ${libro[i].dimensiones.grueso}`);
+            console.log(`Peso: ${libro[i].peso}`);
+            console.log("\n");
+        }
+    } else {
+        console.log("No hay libros en la lista para mostrar.");
+    }
+}
 
+let msj
+msj = "opciones de edición para los libros\n\n";
+msj += "1. Agregar libro\n";
+msj += "2. Eliminar un libro por su nombre\n";
+msj += "3. Eliminar el último libro agregado\n"
+msj += "4. Mostrar lista de libros\n\n"
+msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y 4"
+codigo = parseInt(prompt(mjs));
+switch (código) {
+    case 1:
+        agregarLibro();
+    break;
+    case 2:
+        eliminarLibroNombre();
+    break;
 
+    case 3:
+        eliminarUltimoLibro();
+    break;
+    case 4:
+        mostrarLibros();
+    break;
+    default:
+        document.write(" el código que ingresó no es válido")
+}
