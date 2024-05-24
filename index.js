@@ -533,7 +533,9 @@ switch (codigo) {
         break;
     case 5:
         console.table(NUEVAARRAY);
-        break;    
+        break;
+    case 6:
+        console.table(LISTACASTIGO1, LISTACASTIGO2, LISTACASTIGO3, LISTACASTIGO4, LISTACASTIGO6, LISTACASTIGO8, LISTACASTIGO9, LISTACASTIGO10)    
     default:
         document.write(" el código que ingresó no es válido")
 }
@@ -545,5 +547,86 @@ const NUEVAARRAY = libro.map((libros) => {
         autor: libros.autor,
         editorial: libros.editorial,
         precio: libros.precio,
+    }
+})
+
+const LISTACASTIGO1 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        genero: libros.genero,
+        ISBN: libros.ISBN,
+        idioma: libros.idioma,
+    }
+})
+
+const LISTACASTIGO2 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        formato: libros.formato,
+        descripcion: libros.descripcion,
+        idioma: libros.idioma,
+    }
+})
+
+const LISTACASTIGO3 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        precio: libros.precio,
+        ISBN: libros.ISBN,
+        idioma: libros.idioma,
+    }
+})
+
+const LISTACASTIGO4 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        formato: libros.formato,
+        fechaPublicacion: libros.fechaPublicacion,
+        autor: libros.autor
+    }
+})
+
+const LISTACASTIGO5 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        genero: libros.genero,
+        autor: libros.autor,
+        idioma: libros.idioma,
+    }
+})
+
+const LISTACASTIGO6 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        ubicacion: libros.ubicacion,
+        estado: libros.estado,
+        formato: libros.formato,
+    }
+})
+
+const LISTACASTIGO8 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        fechaPublicacion: libros.fechaPublicacion,
+        dimensiones: libros.dimensiones,
+        formato: libros.formato,
+    }
+})
+
+const LISTACASTIGO9 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        genero: libros.genero,
+        dimensiones: libros.ISBN,
+        estado: libros.estado,
+    }
+})
+
+const LISTACASTIGO10 = libro.map((libros) => {
+    return{
+        titulo: libros.titulo,
+        genero: libros.genero,
+        genero: libros.genero,
+        idioma: libros.idioma,
     }
 })
