@@ -509,36 +509,7 @@ function mostrarLibros() {
     }
 }
 
-let msj
-msj = "opciones de edición para los libros\n\n";
-msj += "1. Agregar libro\n";
-msj += "2. Eliminar un libro por su nombre\n";
-msj += "3. Eliminar el último libro agregado\n"
-msj += "4. Mostrar lista de libros\n"
-msj += "5. Resumen \n\n"
-msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y 5"
-let codigo = parseInt(prompt(msj));
-switch (codigo) {
-    case 1:
-        agregarLibro();
-        break;
-    case 2:
-        eliminarLibroNombre();
-        break;
-    case 3:
-        eliminarUltimoLibro();
-        break;
-    case 4:
-        mostrarLibros();
-        break;
-    case 5:
-        console.table(NUEVAARRAY);
-        break;
-    case 6:
-        console.table(LISTACASTIGO1, LISTACASTIGO2, LISTACASTIGO3, LISTACASTIGO4, LISTACASTIGO6, LISTACASTIGO8, LISTACASTIGO9, LISTACASTIGO10)    
-    default:
-        document.write(" el código que ingresó no es válido")
-}
+
 
 
 const NUEVAARRAY = libro.map((libros) => {
@@ -630,3 +601,54 @@ const LISTACASTIGO10 = libro.map((libros) => {
         idioma: libros.idioma,
     }
 })
+
+let descuentoLibros = libro.map((libros) =>{
+    return{
+        ...libros,
+        descuento: 20,
+    };
+})
+
+let msj
+msj = "opciones de edición para los libros\n\n";
+msj += "1. Agregar libro\n";
+msj += "2. Eliminar un libro por su nombre\n";
+msj += "3. Eliminar el último libro agregado\n"
+msj += "4. Mostrar lista de libros\n"
+msj += "5. Resumen \n"
+msj += "6. castigo \n"
+msj += "7. descuento \n"
+msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y 5"
+let codigo = parseInt(prompt(msj));
+switch (codigo) {
+    case 1:
+        agregarLibro();
+        break;
+    case 2:
+        eliminarLibroNombre();
+        break;
+    case 3:
+        eliminarUltimoLibro();
+        break;
+    case 4:
+        mostrarLibros();
+        break;
+    case 5:
+        console.table(NUEVAARRAY);
+        break;
+    case 6:
+        console.table(LISTACASTIGO1);
+        console.table(LISTACASTIGO2); 
+        console.table(LISTACASTIGO3);
+        console.table( LISTACASTIGO4); 
+        console.table(LISTACASTIGO6); 
+        console.table(LISTACASTIGO8);
+        console.table(LISTACASTIGO9); 
+        console.table(LISTACASTIGO10);
+        break;
+    case 7:
+        console.log(descuentoLibros);
+        break;
+    default:
+        document.write(" el código que ingresó no es válido")
+}
