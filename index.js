@@ -434,29 +434,30 @@ let libro = [
 ]
 
 function agregarLibro() {
-let libros = {};
+    let libros = {};
 
-libro.titulo = prompt("Ingresa el título del libro:");
-libro.autor = prompt("Ingresa el autor del libro:");
-libro.genero = prompt("Ingresa el género del libro:");
-libro.idioma = prompt("Ingresa el idioma del libro:");
-libro.precio = prompt("Ingresa el precio del libro:");
-libro.formato = prompt("Ingresa el formato del libro:");
-libro.ISBN = prompt("Ingresa el ISBN del libro:");
-libro.descripcion = prompt("Ingresa la descripción del libro:");
-libro.estado = prompt("Ingresa el estado del libro:");
-libro.ubicacion = prompt("Ingresa la ubicación del libro:");
-libro.fechaPublicacion = prompt("Ingresa la fecha de publicación del libro:");
-libro.editorial = prompt("Ingresa la editorial del libro:");
-libro.paginas = prompt("Ingresa el número de páginas del libro:");
-libro.dimensiones = {
-    alto: prompt("Ingresa el alto del libro:"),
-    ancho: prompt("Ingresa el ancho del libro:"),
-    grueso: prompt("Ingresa el grueso del libro:")
-};
-libro.peso = prompt("Ingresa el peso del libro:");
+    libro.titulo = prompt("Ingresa el título del libro:");
+    libro.autor = prompt("Ingresa el autor del libro:");
+    libro.genero = prompt("Ingresa el género del libro:");
+    libro.idioma = prompt("Ingresa el idioma del libro:");
+    libro.precio = prompt("Ingresa el precio del libro:");
+    libro.formato = prompt("Ingresa el formato del libro:");
+    libro.ISBN = prompt("Ingresa el ISBN del libro:");
+    libro.descripcion = prompt("Ingresa la descripción del libro:");
+    libro.estado = prompt("Ingresa el estado del libro:");
+    libro.ubicacion = prompt("Ingresa la ubicación del libro:");
+    libro.fechaPublicacion = prompt("Ingresa la fecha de publicación del libro:");
+    libro.editorial = prompt("Ingresa la editorial del libro:");
+    libro.paginas = prompt("Ingresa el número de páginas del libro:");
+    libro.dimensiones = {
+        alto: prompt("Ingresa el alto del libro:"),
+        ancho: prompt("Ingresa el ancho del libro:"),
+        grueso: prompt("Ingresa el grueso del libro:")
+    };
+    libro.peso = prompt("Ingresa el peso del libro:");
 
-libro.push(libros);
+    libro.push(libros);
+    console.log(libro)
 }
 
 
@@ -470,10 +471,12 @@ function eliminarLibroNombre() {
             console.log("Libro eliminado exitosamente.");
             return;
         }
+        console.log(libro);
     }
 
     console.log("No se encontró un libro con ese título.");
 }
+
 
 function eliminarUltimoLibro() {
     if(libro.length > 0) {
@@ -482,6 +485,7 @@ function eliminarUltimoLibro() {
     } else {
         console.log("No hay libros en la lista para eliminar.");
     }
+    console.log(libro);
 }
 
 function mostrarLibros() {
