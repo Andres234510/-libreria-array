@@ -657,6 +657,7 @@ const libroResumenCaro = libro
 .filter((libros) => {
     return libros.precio > 50000
 })
+.sort((a, b) => b.precio - a.precio)
 .map((libros) =>{
     return {
         titulo: libros.titulo,
@@ -717,7 +718,7 @@ msj += "10. ordenado por paginas\n"
 msj += "11. resumen ordenado por mas caro\n"
 msj += "12. resumen ordenado por paginas menores a 100\n"
 msj += "13. resumen ordenado por mas caro de mayor a menor\n"
-msj += "13. resumen ordenado por paginas de mayor a menor\n"
+msj += "14. resumen ordenado por paginas de mayor a menor\n"
 msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y "
 let codigo = parseInt(prompt(msj));
 switch (codigo) {
