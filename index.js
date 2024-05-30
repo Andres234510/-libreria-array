@@ -647,6 +647,8 @@ const libroResumen = libro
     }
 })
 
+const ordenLibros = libro.sort((a, b) => b.paginas - a.paginas)
+
 let msj
 msj = "opciones de edición para los libros\n\n";
 msj += "1. Agregar libro\n";
@@ -657,6 +659,8 @@ msj += "5. Resumen \n"
 msj += "6. castigo \n"
 msj += "7. descuento \n"
 msj += "8. filter \n"
+msj += "9. resumen ordenado \n"
+msj += "10. ordenado por paginas\n"
 msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y 5"
 let codigo = parseInt(prompt(msj));
 switch (codigo) {
@@ -694,6 +698,9 @@ switch (codigo) {
     case 9:
         console.table(libroResumen);
     break;
+    case 10:
+        console.log(ordenLibros);
+    break;
     default:
-        document.write(" el código que ingresó no es válido")
+        console.log(" el código que ingresó no es válido")
 }
