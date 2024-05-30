@@ -84,7 +84,7 @@ let libro = [
         peso: "856 gr"
     },
     {
-        titulo : "Harry Potter y el caliz de fuego",
+        titulo : "Harry Potter y la orden del fenix",
         autor : "J.K. Rowling",
         genero : "fantasia",
         idioma : "Castellano",
@@ -105,7 +105,7 @@ let libro = [
         peso: "856 gr"
     },
     {
-        titulo : "Harry Potter y el caliz de fuego",
+        titulo : "Harry Potter y misterio del principe",
         autor : "J.K. Rowling",
         genero : "fantasia",
         idioma : "Castellano",
