@@ -703,7 +703,68 @@ const libroResumenPaginasMayor = libro
     }
 })
 
-let msj
+const hallarLibroNombre = libro.find((libros) => {
+    return libros.titulo === "La sombra del viento";
+})
+
+const hallarLibroAutor = libro.find((libros) => {
+    return libros.autor === "J.K. Rowling";
+})
+
+const hallarLibroFecha = libro.find((libros) => {
+    return libros.fechaPublicacion === 1975;
+})
+
+const hallarLibrogenero = libro.find((libros) => {
+    return libros.genero === "Ficción absurda";
+})
+
+const hallarLibroidioma = libro.find((libros) => {
+    return libros.idioma === "Aleman";
+})
+
+/* ---------------------------------------------------------------------------------------------------*/
+const hallarLibroprecio = libro.find((libros) => {
+    return libros.precio === 26000;
+})
+
+const hallarLibroISBN = libro.find((libros) => {
+    return libros.ISBN === "9788432217529";
+})
+
+const hallarLibroDescripcion = libro.find((libros) => {
+    return libros.descripcion === "La historia de Firdaus, una mujer egipcia que desafía las normas sociales y lucha por su libertad.";
+})
+
+const hallarLibroEstado = libro.find((libros) => {
+    return libros.estado === "Nuevo";
+})
+
+const hallarLibroUbicacion = libro.find((libros) => {
+    return libros.ubicacion === "Panamericana";
+})
+
+const hallarLibroEditorial = libro.find((libros) => {
+    return libros.editorial === "Mirahadas";
+})
+
+const hallarLibroPaginas = libro.find((libros) => {
+    return libros.paginas === 576;
+})
+
+const hallarLibroDimensiones = libro.find((libros) => {
+    return libros.dimensiones ===  20.3 ,  12.7 ,1.5 ;
+})
+
+const hallarLibropeso = libro.find((libros) => {
+    return libros.peso === "0.9 kg";
+})
+
+const hallarLibroIdioma = libro.find((libros) => {
+    return libros.idioma === "Ruso";
+})
+
+let msj, subMenu
 msj = "opciones de edición para los libros\n\n";
 msj += "1. Agregar libro\n";
 msj += "2. Eliminar un libro por su nombre\n";
@@ -719,6 +780,7 @@ msj += "11. resumen ordenado por mas caro\n"
 msj += "12. resumen ordenado por paginas menores a 100\n"
 msj += "13. resumen ordenado por mas caro de mayor a menor\n"
 msj += "14. resumen ordenado por paginas de mayor a menor\n"
+msj += "15. Hallar libro por"
 msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y "
 let codigo = parseInt(prompt(msj));
 switch (codigo) {
@@ -741,9 +803,10 @@ switch (codigo) {
         console.table(LISTACASTIGO1);
         console.table(LISTACASTIGO2); 
         console.table(LISTACASTIGO3);
-        console.table( LISTACASTIGO4); 
+        console.table(LISTACASTIGO4); 
         console.table(LISTACASTIGO6); 
         console.table(LISTACASTIGO8);
+        console.table(LISTACASTIGO7);
         console.table(LISTACASTIGO9); 
         console.table(LISTACASTIGO10);
         break;
@@ -770,6 +833,47 @@ switch (codigo) {
     break;
     case 14:
         console.table(libroResumenPaginasMayor);
+    break;
+    case 15:
+        subMenu = "1. hallar libro por nombre \n"
+        subMenu += "2. Buscar un objeto del array por autor. \n"
+        subMenu += "3. Buscar un objeto del array por  fecha de publicación. \n"
+        subMenu += "4. Buscar un objeto del array por  genero.\n"
+        subMenu += "5. Buscar un objeto del array por  idioma. \n"
+        subMenu += "6. Buscar un objeto del array 10  iteraciones diferentes. \n\n"
+        subMenu += "Seleccione una opcion"
+        let opcion = parseInt(prompt(subMenu))
+        switch (opcion){
+            case 1:
+                console.log(hallarLibroNombre); 
+            break;
+            case 2:
+                console.log(hallarLibroAutor); 
+            break;
+            case 3: 
+            console.log(hallarLibroFecha);
+            break;
+            case 4: 
+            console.log(hallarLibrogenero);
+            break;
+            case 5: 
+            console.log(hallarLibroidioma);
+            break;
+            case 6: 
+                console.log(hallarLibroDescripcion);
+                console.log(hallarLibroDimensiones);
+                console.log(hallarLibroEditorial);
+                console.log(hallarLibroEstado);
+                console.log(hallarLibroISBN);
+                console.log(hallarLibroIdioma);
+                console.log(hallarLibroPaginas);
+                console.log(hallarLibroUbicacion);
+                console.log(hallarLibropeso);
+                console.log(hallarLibroprecio);
+            break;
+            default:
+                console.log(" la opcion que ingresó no es válida")
+        }
     break;
     default:
         console.log(" el código que ingresó no es válido")
