@@ -745,7 +745,7 @@ const hallarLibroUbicacion = libro.find((libros) => {
 })
 
 const hallarLibroEditorial = libro.find((libros) => {
-    return libros.editorial === "Mirahadas";
+    return libros.editorial === "Salamandra Infantil y Juvenil";
 })
 
 const hallarLibroPaginas = libro.find((libros) => {
@@ -761,7 +761,7 @@ const hallarLibropeso = libro.find((libros) => {
 })
 
 const hallarLibroIdioma = libro.find((libros) => {
-    return libros.idioma === "Ruso";
+    return libros.idioma === "Italiano";
 })
 
 let msj, subMenu
