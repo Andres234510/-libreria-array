@@ -780,8 +780,8 @@ msj += "11. resumen ordenado por mas caro\n"
 msj += "12. resumen ordenado por paginas menores a 100\n"
 msj += "13. resumen ordenado por mas caro de mayor a menor\n"
 msj += "14. resumen ordenado por paginas de mayor a menor\n"
-msj += "15. Hallar libro por"
-msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y "
+msj += "15. Hallar libro por \n\n"
+msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y 15"
 let codigo = parseInt(prompt(msj));
 switch (codigo) {
     case 1:
